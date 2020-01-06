@@ -36,9 +36,8 @@ public class PersonList extends Person {
                 if (inputName.equals(p.getLastName())) {
                     count++;
                     System.out.println(p);
-                } else if (!inputName.equals(p.getLastName())) {
+                } else
                     continue;
-                }
             }
 
             //checking for matching and invalid entries
