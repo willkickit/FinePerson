@@ -1,8 +1,6 @@
 package com.company;
 
 import java.util.*;
-import java.util.stream.Stream;
-import static java.lang.Integer.parseInt;
 
 public class PersonList extends Person {
     private List<Person> list;
