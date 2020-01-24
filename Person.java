@@ -4,14 +4,14 @@ public class Person {
 
     private String firstName;
     private String lastName;
-    private int socialSecurityNumber;
+    private int id;
 
     public Person() { }
 
-    public Person(String firstName, String lastName, int socialSecurityNumber) {
+    public Person(String firstName, String lastName, int id) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.socialSecurityNumber = socialSecurityNumber;
+        this.id = id;
     }
 
     String getLastName() {
@@ -22,7 +22,7 @@ public class Person {
         public String toString() {
             return this.firstName + " " +
                     this.lastName + ": " +
-                    this.socialSecurityNumber;
+                    this.id;
         }
 
 }
