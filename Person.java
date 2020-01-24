@@ -18,7 +18,7 @@ public class Person {
         return lastName;
     }
 
-    //returning person's full name and ssn
+    //returning person's full name and id
         public String toString() {
             return this.firstName + " " +
                     this.lastName + ": " +
