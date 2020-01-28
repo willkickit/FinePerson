@@ -1,44 +1,26 @@
 package com.company;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.ListIterator;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        String lastName;
 
-        // Create List of People
-        Person bill = new Person("Bill", "Gates", 3803932);
-        Person jeff = new Person("Jeff", "Bezos", 3814333);
-        Person elon = new Person("Elon", "Musk", 3819193);
+        PeopleUtility ceoMap = new PeopleUtility();
 
-        List<Person> listOfPeople = new ArrayList<>();
-        listOfPeople.add(bill);
-        listOfPeople.add(jeff);
-        listOfPeople.add(elon);
+        Person elon = new Person("Elon",3334567);
+        Person jeff = new Person("Jeff",4445678);
+        Person bill = new Person("Bill",5556789);
 
+        Map<String, Person> map = new HashMap<>();
+        map.put("Musk", elon);
+        map.put("Bezos", jeff);
+        map.put("Gates", bill);
 
-        // Prompt user to get last name
-        lastName = prompt_for_last_name(listOfPeople);
-
-        // use personList and last_name and
-        // return the person (null if not found)
-        List<Person> p = findPerson(listOfPeople, lastName);
-
-
-        // If found print out the person
-        if (p != null) {
-            System.out.println(p);
-            addNewPerson(listOfPeople);
-            // print first, last, ssn
-        }
+        System.out.println(ceoMap.prompt_for_last_name(map));
     }
 
-
-    public static String prompt_for_last_name(List<Person> listOfPeople) {
+    /*public static String prompt_for_last_name(List<Person> listOfPeople) {
 
         Scanner input = new Scanner(System.in);
         System.out.println("Bill Gates \n" + "Jeff Bezos\n" + "Elon Musk");
@@ -87,5 +69,5 @@ public class Main {
         listOfPeople.add(new Person(newFirstName, newLastName, newID));
         System.out.println(listOfPeople);
         System.out.printf(newFirstName + " " + newLastName + " has been added to the list!");
-    }
+    }*/
 }

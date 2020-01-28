@@ -8,6 +8,11 @@ public class Person {
 
     public Person() { }
 
+    public Person(String firstName, int id){
+        this.firstName = firstName;
+        this.id = id;
+    }
+
     public Person(String firstName, String lastName, int id) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -18,10 +23,10 @@ public class Person {
         return lastName;
     }
 
-    //returning person's full name and id
+    //returning person's first name and id
         public String toString() {
-            return this.firstName + " " +
-                    this.lastName + ": " +
+            return this.firstName + ": " +
+                    //this.lastName + ": " +
                     this.id;
         }
 
